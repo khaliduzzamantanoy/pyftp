@@ -463,7 +463,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - 🌐 **GitHub**: [@khaliduzzamantanoy](https://github.com/khaliduzzamantanoy)
 - 📧 **Email**: [Contact via GitHub](https://github.com/khaliduzzamantanoy)
 - 🚀 **Project**: [PyFTP Movie Server](https://github.com/khaliduzzamantanoy/pyftp.git)
-- 💼 **LinkedIn**: [Connect with me](https://linkedin.com/in/khaliduzzamantanoy)
+- 💼 **LinkedIn**: [Connect with me](https://linkedin.com/in/iamtanoy)
 
 ## 🆘 Support & Help
 
@@ -471,7 +471,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 - 📚 **Documentation**: Check this README and inline code comments
 - 🐛 **Issues**: [GitHub Issues](https://github.com/khaliduzzamantanoy/pyftp/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/khaliduzzamantanoy/pyftp/discussions)
 - 📧 **Email**: Reach out via GitHub for complex issues
 
 ### Common Issues & Solutions
