@@ -100,59 +100,6 @@ docker build -t pyftp-server .
 # Run the container
 docker run -p 8000:8000 -v $(pwd)/static/movies:/app/static/movies pyftp-server
 ```
-
-## 🎬 Managing Movies
-
-### Adding Movies
-
-To add a new movie to your server:
-
-1. **Create Movie Directory**
-
-   ```bash
-   mkdir "static/movies/your_movie_name"
-   ```
-
-2. **Add Required Files**
-
-   - `movie.mp4` - Your movie file (supports various formats)
-   - `poster.jpg` - Movie poster image (JPG/PNG)
-   - `title.txt` - Movie title (plain text file)
-
-3. **Update Movie Database**
-   Edit `data/movies.json` with the new movie metadata:
-
-   ```json
-   {
-     "id": "doraemon_the_movie_nobitas_sky_utopia_hindi__japanese",
-     "title": "Doraemon the Movie Nobitas Sky Utopia (Hindi & Japanese)",
-     "rating": "6.7",
-     "language": "Hindi + Japanese",
-     "duration": "1h 47m",
-     "genres": ["Drama", "Adventure"],
-     "top_rated": false,
-     "poster": "movies/doraemon_the_movie_nobitas_sky_utopia_hindi__japanese/poster.jpg"
-   }
-   ```
-
-4. **Restart Server**
-
-   ```bash
-   # Development
-   python app.py
-
-   # Production
-   sudo systemctl restart pyftp-server
-   ```
-
-### Supported Formats
-
-- **Video**: MP4, AVI, MKV, MOV, WMV
-- **Images**: JPG, JPEG, PNG, WebP
-- **Subtitles**: SRT, VTT (place in movie folder)
-
-> 💡 **Pro Tip**: Use descriptive folder names without spaces for better URL compatibility.
-
 ## 🔐 Admin Panel
 
 Access the powerful admin interface at `/admin` to manage your movie server:
