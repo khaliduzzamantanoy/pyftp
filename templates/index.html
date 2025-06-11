@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block title %}Movie Server{% endblock %} {% block
+content %}
+<div id="movies-container" class="row g-4 justify-content-center">
+  {% if movies %} {% for movie in movies %}
+  <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+    <div
+      class="movie-card"
+      tabindex="0"
+      role="button"
+      aria-label="View options for {{ movie.title }}"
+      data-movie-id="{{ movie.id }}"
+    >
+      <div class="card-inner">
+        <div
+          class="card-front"
+          style="background-image: url('{{ url_for('static', filename=movie.poster) }}');"
+          aria-hidden="true"
+        >
+          <div class="movie-title">{{ movie.title }}</div>
+        </div>
+        <div class="card-back">
+          <span class="badge bg-warning text-dark mb-2"
+            >IMDB: {{ movie.rating }}</span
+          >
+          <div><strong>Language:</strong> {{ movie.language }}</div>
+          <div><strong>Duration:</strong> {{ movie.duration }}</div>
+          <div><strong>Genres:</strong> {{ movie.genres | join(', ') }}</div>
+          {% if movie.top_rated %}
+          <div class="top-rated mt-2">Top Rated</div>
+          {% endif %}
+          <div class="card-buttons mt-3 d-flex gap-2 justify-content-center">
+            <button
+              class="btn btn-success btn-sm watch-now-btn"
+              data-movie-id="{{ movie.id }}"
+            >
+              Watch Now
+            </button>
+            <a
+              href="{{ url_for('download_movie', movie_id=movie.id) }}"
+              class="btn btn-primary btn-sm"
+              download
+            >
+              Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <p class="text-center fs-5 text-muted mt-5">No movies found.</p>
+  {% endif %}
+</div>
+{% endblock %}
